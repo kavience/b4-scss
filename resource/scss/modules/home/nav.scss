@@ -1,0 +1,32 @@
+@mixin nav-color {
+  a {
+    color: #000000 !important;
+  }
+  .btn-search {
+    color: #000000 !important;
+    border: 1px solid #000000;
+  }
+}
+
+.shop-nav {
+  &:hover {
+    background-color: #ffffff;
+    opacity: 0.7 !important;
+    @include nav-color;
+  }
+  transition: all .2s ease-out;
+  .nav-item {
+    @media (min-width: 992px) {
+      margin-left: 3rem;
+    }
+  }
+  .input-search {
+    opacity: 0.7;
+  }
+}
+
+.bg-white-light {
+  background-color: #ffffff;
+  opacity: 0.7;
+  @include nav-color;
+}
